@@ -1,3 +1,4 @@
+#testing git
 node default { 
 file  {'/etc/motd':
 path => '/etc/motd',
@@ -7,6 +8,7 @@ content => 'puppet testing servers',
 file {'create file':
 path => '/home/manu.txt',
 ensure => 'present',
+source => '/root/manu.txt'
 }
 package {'httpd':
 ensure => 'installed',
