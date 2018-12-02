@@ -6,9 +6,9 @@ ensure => 'present',
 content => 'puppet testing servers',
 }
 file {'create file':
+source => 'puppet:///modules/prtg/shara.txt',
 path => '/home/manu.txt',
 ensure => 'present',
-source => '/root/manu.txt'
 }
 package {'httpd':
 ensure => 'installed',
